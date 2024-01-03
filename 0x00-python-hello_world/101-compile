@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "import py_compile,os; py_compile.compile(os.environ['PYFILE'], cfile=os.path.splitext(os.environ['PYFILE'])[0] + '.pyc', doraise=True)"
