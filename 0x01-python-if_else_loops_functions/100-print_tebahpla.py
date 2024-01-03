@@ -4,4 +4,4 @@ for alpha in range(ord('z'), ord('a') -1, -1):
         newalpha = chr(alpha)
     elif (alpha % 2) != 0:
         newalpha = chr(alpha - ord('a') + ord('A'))
-    print(newalpha, end="")
+    print("{}".format(newalpha), end="")
