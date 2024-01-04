@@ -6,6 +6,9 @@ if __name__ == "__main__":
     if num == 0:
         print("{} arguments.".format(num))
     elif num > 0:
-        print("{} arguments:".format(num))
+        if num == 1:
+            print("{} argument:".format(num))
+        elif num > 1:
+            print("{} arguments:".format(num))
         for i in range(1, num + 1):
             print(f"{i}: {arguments[i]}")
