@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def no_c(my_string):
+    length = len(my_string)
+    for i in range(0, length):
+        letter = ord(my_string[i])
+        if letter == ord('c') or letter == ord('C'):
+            my_string[i] = []
+    return my_string
