@@ -1,0 +1,6 @@
+#ifndef CPYTHON_H
+#define CPYTHON_H
+
+void print_python_list_info(PyObject *p);
+
+#endif
