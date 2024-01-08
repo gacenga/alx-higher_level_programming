@@ -39,7 +39,8 @@ new->next = current;
 }
 else
 {
-new->next = current;
+new->next = *head;
+*head = new;
 }
 }
 return (new);
