@@ -1,0 +1,60 @@
+#include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+/**
+* check_cycle - checks if a singly linked list has a cycle in it
+*
+* @list:linked list
+* Return: 0 if no cycle 1 if cycle
+*/
+int check_cycle(listint_t *list)
+{
+  listint_t *current;
+  listint_t **point;
+  int i = 0, result;
+  int size = 0;
+  current = list;
+  while (current != NULL)
+    {
+      current = current->next;
+      size++;
+    }
+  current = list;
+  point = (listint_t **)malloc(size * sizeof(listint_t *));
+  if (point == NULL)
+    {
+      return (0);
+    }
+  while (current != NULL)
+    {
+      point[i] = current;
+      current = current->next;
+      i++;
+    }
+  result = isThereCycle(point, size);
+  free(point);
+  return (result);
+}
+/**
+* isThereCycle - checks if there is cycle
+*
+* @point:array of pointers
+* @n:size of array
+* Return:0 if no cycle,1 if cycle
+*/
+int isThereCycle(listint_t **point, int n)
+{
+int i;
+ int p;
+ for (i = 0; i < n; i++)
+   {
+   for (p = n - 1; p <= 0; p--)
+     {
+       if (point[i] == point[p])
+	 {
+	   return(1);
+	     }
+     }
+   }
+ return (0);
+}
