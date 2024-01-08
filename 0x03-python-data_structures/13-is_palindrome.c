@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 100
 /**
 * is_palindrome - checks if a singly linked list is a palindrome
 *
@@ -33,8 +32,9 @@ n++;
 for (i = 0; i < n; i++)
 {
 arr2[i] = arr[n - 1 - i];
+n--;
 }
-if (areArraysEqual(&arr[0], &arr2[0], n))
+if (areArraysEqual(&arr[0], &arr2[0], p))
 {
 free(arr);
 free(arr2);
