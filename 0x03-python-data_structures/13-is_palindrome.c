@@ -13,7 +13,8 @@ int is_palindrome(listint_t **head)
 int *arr;
 int *arr2;
 int n = 0;
-int i, p;
+int i, result;
+int p = 0;
 listint_t *current;
 current = *head;
 while (current != NULL)
@@ -23,6 +24,11 @@ p++;
 }
 arr = (int *)malloc(p * sizeof(int));
 arr2 = (int *)malloc(p * sizeof(int));
+if (arr == NULL || arr2 == NULL)
+{
+return (0);
+}
+current = *head;
 while (current != NULL)
 {
 arr[n] = current->n;
@@ -32,20 +38,11 @@ n++;
 for (i = 0; i < n; i++)
 {
 arr2[i] = arr[n - 1 - i];
-n--;
 }
-if (areArraysEqual(&arr[0], &arr2[0], p))
-{
+result = areArraysEqual(&arr[0], &arr2[0], n);
 free(arr);
 free(arr2);
-return (1);
-}
-else
-{
-free(arr);
-free(arr2);
-return (0);
-}
+return (result);
 }
 /**
 * areArraysEqual - checks if arrays are equal
