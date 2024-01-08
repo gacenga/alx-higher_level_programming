@@ -27,6 +27,8 @@ if (*head == NULL)
 }
 else
 {
+if (current->n < number)
+{
 while (current != NULL && current->n < number)
 {
 more = current;
@@ -34,6 +36,11 @@ current = current->next;
 }
 more->next = new;
 new->next = current;
+}
+else
+{
+new->next = current;
+}
 }
 return (new);
 }
