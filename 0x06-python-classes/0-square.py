@@ -2,9 +2,10 @@
 
 
 """
-    *square - classs
+    *Square - class
 """
 
 
 class Square:
+    """Empty class"""
     pass
