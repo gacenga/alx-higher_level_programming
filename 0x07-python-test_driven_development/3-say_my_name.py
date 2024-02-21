@@ -10,6 +10,8 @@
     Prints:
         My name is <first name> <last name>
 """
+
+
 def say_my_name(first_name, last_name=""):
     """defines function say_my_name"""
     if not isinstance(first_name, str):
