@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+
+
+"""function text_indentation"""
+
+
+def text_indentation(text):
+    """defines text_indentation"""
+    delimiters = ['.', '?', ':']
+    current_line = ""
+    lines = []
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+    for char in text:
+        current_line += char
+        if char in delimiters:
+            lines.append(current_line.strip())
+            current_line = ""
+    if current_line.strip():
+        lines.append(current_line.strip())
+    for line in lines:
+        print(line, end="\n\n")
