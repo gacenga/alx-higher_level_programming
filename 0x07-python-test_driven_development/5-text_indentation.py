@@ -11,6 +11,8 @@ def text_indentation(text):
     lines = []
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    if text == None:
+        raise TypeError("text must be a string")
     for char in text:
         current_line += char
         if char in delimiters:
