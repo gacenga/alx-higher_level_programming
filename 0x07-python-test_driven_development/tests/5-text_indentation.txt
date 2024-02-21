@@ -10,7 +10,6 @@ to the place?
 known as joy.
 <BLANKLINE>
 since
-<BLANKLINE>
 
 >>> text_indentation(4)
 Traceback (most recent call last):

@@ -18,5 +18,5 @@ def text_indentation(text):
             current_line = ""
     if current_line.strip():
         lines.append(current_line.strip())
-    for line in lines:
-        print(line, end="\n\n")
+    for i, line in enumerate(lines):
+        print(line, end="\n\n" if i < len(lines) - 1 else "")
